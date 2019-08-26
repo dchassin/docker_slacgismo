@@ -11,7 +11,6 @@ RUN sudo python3.7 -m pip install pandas
 RUN sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 RUN sudo update-alternatives --set python /usr/bin/python3.7
 RUN sudo apt-get -y install python3-pip
-RUN sudo pip3 install matplotlib
-RUN sudo pip3 install pandas
+RUN sudo python3.7 -m pip install matplotlib
 RUN sudo rm -f /usr/bin/python3
 RUN sudo ln -s /etc/alternatives/python /usr/bin/python3
