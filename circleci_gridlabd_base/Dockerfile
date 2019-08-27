@@ -1,4 +1,4 @@
-FROM circleci/python:3.7.4
+FROM slacgismo/circleci_python37_base
 ENV container docker
 
 RUN sudo apt-get update
