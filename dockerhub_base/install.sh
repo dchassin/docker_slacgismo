@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install needed system tools
-yum -q update -y ; 
+yum -q update -y
 yum -q clean all
 yum -q groupinstall "Development Tools" -y
 yum -q install cmake -y 
