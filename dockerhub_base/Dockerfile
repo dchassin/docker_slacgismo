@@ -4,5 +4,5 @@ ENV container docker
 RUN yum update -y 
 RUN yum install git -y
 
-RUN bash install.sh
+RUN bash dockerhub_base/install.sh
 
