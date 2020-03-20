@@ -11,4 +11,5 @@ RUN yum install git -y
 COPY install.sh /tmp/
 RUN chmod +wx *.sh
 RUN bash install.sh
+EXPOSE 6266-6299/tcp
 
