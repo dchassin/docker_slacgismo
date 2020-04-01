@@ -1,17 +1,12 @@
-rm -f /var/lib/rpm/.*.lock
-rpm --rebuilddb
-restorecon -r /var/lib/rpm
-
 # Install needed system tools
-yum -q update -y
-yum -q clean all
-yum -q groupinstall "Development Tools" -y
-yum -q install cmake -y 
-yum -q install ncurses-devel -y
-yum -q install epel-release -y
-yum -q install curl-devel -y
-yum -q install which -y
-yum -q install svn -y
+yum clean all
+yum groupinstall "Development Tools" -y
+yum install cmake -y 
+yum install ncurses-devel -y
+yum install epel-release -y
+yum install curl-devel -y
+yum install which -y
+yum install svn -y
 
 # python3 support needed as of 4.2
 yum -q install python3 python36-devel python3-pip python3-tkinter -y
