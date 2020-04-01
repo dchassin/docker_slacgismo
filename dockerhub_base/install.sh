@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install needed system tools
 yum -q update -y
 yum -q clean all
