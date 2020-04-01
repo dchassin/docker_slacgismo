@@ -1,3 +1,7 @@
+rm -f /var/lib/rpm/.*.lock
+rpm --rebuilddb
+restorecon -r /var/lib/rpm
+
 # Install needed system tools
 yum -q update -y
 yum -q clean all
