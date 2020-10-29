@@ -1,10 +1,10 @@
 build:
   docker build --nocache -f Dockerfile -t slacgismo/gridlabd_dockerhub_base:build .
  
-all: build install deploy
+all: deploy
 
-install:
+install: build
   docker tag slacgismo/gridlabd_dockerhub_base:build slacgismo/gridlabd_dockerhub_base:latest
   
-deploy:
+deploy: install
   docker push slacgismo/gridlabd_dockerhub_base:latest
