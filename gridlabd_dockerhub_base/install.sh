@@ -25,6 +25,6 @@ make altinstall
 ln -sf /usr/local/bin/python3.7 /usr/local/bin/python3
 ln -f /usr/local/bin/python3.7m-config /usr/local/bin/python3-config
 ln -s /usr/local/bin/pyvenv-3.7 /usr/local/bin/pyvenv
-/usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy
+/usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy networkx
 cd /usr/local/src
 rm -f Python-3.7.7.tgz
