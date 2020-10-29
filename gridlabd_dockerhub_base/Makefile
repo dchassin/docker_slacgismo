@@ -6,10 +6,8 @@ help:
 build:
 	docker build --no-cache -f Dockerfile -t "slacgismo/gridlabd_dockerhub_base:build" .
 
-all: deploy
-
-install: build
+install:
 	docker tag "slacgismo/gridlabd_dockerhub_base:build" "slacgismo/gridlabd_dockerhub_base:latest"
 
-deploy: install
+deploy:
 	docker push "slacgismo/gridlabd_dockerhub_base:latest"
