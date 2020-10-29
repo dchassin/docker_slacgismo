@@ -11,6 +11,10 @@ yum install svn -y
 yum install xz-devel bzip2-devel zlib-devel -y
 yum install openssl-devel -y
 
+yum install 'dnf-command(config-manager)' -y
+yum config-manager --set-enabled PowerTools
+yum install armadillo-devel -y
+
 cd /usr/local/src
 curl https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz > Python-3.7.7.tgz
 tar xzf Python-3.7.7.tgz
