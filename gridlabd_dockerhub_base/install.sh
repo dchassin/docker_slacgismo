@@ -32,3 +32,7 @@ ln -sf /usr/local/bin/pip3.9 /usr/local/bin/pip3
 /usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy networkx pytz pysolar PyGithub
 cd /usr/local/src
 rm -f Python-3.9.0.tgz
+
+export LC_ALL=C
+export MAKEFLAGS="-j$(($(nproc)*3))" 
+export PYTHONSETUPFLAGS="-j $(($(nproc)*3))"
