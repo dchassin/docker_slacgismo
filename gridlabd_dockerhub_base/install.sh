@@ -32,3 +32,4 @@ ln -sf /usr/local/bin/pip3.9 /usr/local/bin/pip3
 /usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy networkx pytz pysolar PyGithub
 cd /usr/local/src
 rm -f Python-3.9.0.tgz
+pip3 install --upgrade pip
