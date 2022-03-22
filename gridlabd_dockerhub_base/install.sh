@@ -7,13 +7,20 @@ yum install epel-release -y
 yum install curl-devel -y
 yum install which -y
 yum install svn -y
-
 yum install xz-devel bzip2-devel zlib-devel -y
 yum install openssl-devel -y
-
 yum install 'dnf-command(config-manager)' -y
 yum config-manager --set-enabled PowerTools
 yum install armadillo-devel -y
+yum install glib2-devel
+
+cd /usr/local/src
+git clone https://github.com/brianb/mdbtools.git mdbtools
+cd mdbtools
+autoreconf -if 
+./configure 
+make
+make install
 
 cd /usr/local/src
 yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
