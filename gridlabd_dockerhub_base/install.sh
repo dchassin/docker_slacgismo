@@ -14,6 +14,9 @@ yum install openssl-devel -y
 yum install 'dnf-command(config-manager)' -y
 yum config-manager --set-enabled PowerTools
 yum install armadillo-devel -y
+dnf upgrade -y 
+dnf install sqlite -y
+yum install sqlite-devel -y
 
 cd /usr/local/src
 yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
