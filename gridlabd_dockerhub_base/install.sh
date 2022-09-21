@@ -43,3 +43,5 @@ ln -sf /usr/local/bin/pip3.9 /usr/local/bin/pip3
 cd /usr/local/src
 rm -f Python-3.9.6.tgz
 pip3 install --upgrade pip
+pip install scipy --upgrade 
+pip install numpy --upgrade
