@@ -39,7 +39,9 @@ ln -sf /usr/local/bin/python3.9-config /usr/local/bin/python3-config
 ln -sf /usr/local/bin/pydoc3.9 /usr/local/bin/pydoc
 ln -sf /usr/local/bin/idle3.9 /usr/local/bin/idle
 ln -sf /usr/local/bin/pip3.9 /usr/local/bin/pip3
-/usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy networkx pytz pysolar PyGithub scikit-learn xlrd boto3
+/usr/local/bin/python3 -m pip install matplotlib Pillow pandas numpy networkx pytz pysolar PyGithub scikit-learn xlrd boto3 cbcpy
 cd /usr/local/src
 rm -f Python-3.9.6.tgz
 pip3 install --upgrade pip
+pip install scipy --upgrade 
+pip install numpy --upgrade
