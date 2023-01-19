@@ -5,7 +5,7 @@ VOLUME [ "/sys/fs/cgroup" ]
 WORKDIR /tmp
 RUN apt update
 RUN apt-get install sudo 
-RUN apt install git
+RUN apt install git -y
 ENV LC_ALL=C
 ENV MAKEFLAGS="-j$(($(nproc)*3))" 
 ENV PYTHONSETUPFLAGS="-j $(($(nproc)*3))"
