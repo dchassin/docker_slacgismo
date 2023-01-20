@@ -1,13 +1,11 @@
-FROM oraclelinux:8.5
+FROM ubuntu:22.10
 ENV container docker
 
 VOLUME [ "/sys/fs/cgroup" ]
 WORKDIR /tmp
-RUN yum update -y 
-RUN yum install git -y
-COPY ./install.sh /tmp/
-RUN chmod +wx *.sh
-RUN bash install.sh
+RUN apt update
+RUN apt-get install sudo 
+RUN apt install git -y
 ENV LC_ALL=C
 ENV MAKEFLAGS="-j$(($(nproc)*3))" 
 ENV PYTHONSETUPFLAGS="-j $(($(nproc)*3))"
